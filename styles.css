@@ -4,11 +4,13 @@
 /* --VARIABLES-- */
 :root {
     --primary: royalblue;
-    --light: rgb(190, 204, 245);
+    --light: rgb(178, 193, 238);
     --dark: rgb(32, 69, 180);
     --black: black;
     --white: white;
     --grey: rgb(155, 155, 155);
+    --hero-gradient-first: var(--light);
+    --hero-gradient-second: rgb(212, 218, 236);
 }
 
 /* --RESET-- */
@@ -115,6 +117,10 @@ a {
 
 a:hover {
     color: var(--light);
+}
+
+a .fas {
+    margin-left: 0.4rem;
 }
 
 button {
@@ -231,8 +237,8 @@ button {
 
 .hero {
     width: 100%;
-    padding: 2rem 0 4rem;
-    background: var(--light);
+    padding: 4rem 0 6rem;
+    background: linear-gradient(45deg, var(--hero-gradient-first), var(--hero-gradient-second));
 }
 
 .hero-text {
@@ -285,7 +291,7 @@ button {
 }
 
 .info-card .info-card-content p {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 /* Footer */
@@ -372,6 +378,7 @@ button {
     .hero-form {
         margin: 0 auto;
     }
+
     .info-card {
         flex-direction: row;
         gap: 0 2rem;
@@ -383,10 +390,6 @@ button {
     
     .info-card .info-card-content {
         text-align: left;
-    }
-    
-    .info-card .info-card-content p {
-        margin-bottom: 1rem;
     }
 }
 
@@ -411,7 +414,7 @@ button {
     }
 
     .hero {
-        padding: 4rem 0 7rem;
+        padding: 6rem 0 8rem;
     }
     
     .hero-text h2 {
